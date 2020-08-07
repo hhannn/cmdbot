@@ -80,4 +80,4 @@ bot.load_extension('cogs.fissure')
 bot.load_extension('cogs.muhbot')
 
 bot.loop.create_task(changepr())
-bot.run('NjI0OTkyMjI2NzI3OTUyMzk1.XYZDXg.Ixioem2WZbhfKO8EsrlTpeLhhaA')
+bot.run('NjI0OTkyMjI2NzI3OTUyMzk1.XYZDXg.g6vJ97WIq1KiG8YYv6n-QtFP-Sk')
