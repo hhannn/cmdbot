@@ -8,6 +8,8 @@ import asyncio
 
 bot = commands.Bot(command_prefix = '!')
 
+bot.remove_command('help')
+
 @bot.event
 async def on_ready():
     print('cmd bot is online')
@@ -58,8 +60,6 @@ async def purge(ctx, amount : int):
     if ctx.message.author.guild_permissions.manage_messages:
         await ctx.channel.purge(limit=amount + 1)
         await ctx.send(f"Cleared {amount} amount of messages.", delete_after=10.0)
-    else:
-        print("test")
         
 @bot.command()
 @commands.is_owner()

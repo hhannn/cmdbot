@@ -81,70 +81,14 @@ class Muhbot(commands.Cog):
                     await channel.send(embed=solNode(data[planet]), delete_after=60.0)
                 await asyncio.sleep(120)
 
+    @commands.command()
+    async def arbinotif(self, ctx):
+        await ctx.send(f"{ctx.author.mention} Are you sure you want to set")
+
     @commands.Cog.listener()
     async def on_message(self, message):
         if message.author == self.bot.user:
             return
-        
-        if 'arcane acceleration' in message.content.lower():
-            embed=discord.Embed(color=0x5ff1f1)
-            embed.set_thumbnail(url="https://vignette.wikia.nocookie.net/warframe/images/3/3d/ArcaneAcceleration.png/revision/latest?cb=20181225172053")
-            embed.add_field(
-                name='Arcane Acceleration', 
-                value='On Critical Hit: 5% / 10% / 15% / 20% chance to give 15% / 30% / 45% / 60% Fire Rate to Primary Weapons for 2 / 3 / 5 / 6 seconds', 
-                inline=True
-            )
-            await message.channel.send(embed=embed)
-        
-        if 'arcane aegis' in message.content.lower():
-            embed=discord.Embed(color=0x5ff1f1)
-            embed.set_thumbnail(url="https://vignette.wikia.nocookie.net/warframe/images/3/3e/ArcaneAegis.png/revision/latest?cb=20181225172055")
-            embed.add_field(
-                name='Arcane Aegis', 
-                value='On Damaged: 2% / 3% / 5% / 6% chance for 15 / 30 / 45 / 60 Shields Regen/sec for 5 / 10 / 15 / 20 Seconds', 
-                inline=True
-            )
-            await message.channel.send(embed=embed)
-
-        if 'arcane agility' in message.content.lower():
-            embed=discord.Embed(color=0x5ff1f1)
-            embed.set_thumbnail(url="https://vignette.wikia.nocookie.net/warframe/images/0/0d/ArcaneAgility.png/revision/latest?cb=20181225172056")
-            embed.add_field(
-                name='Arcane Agility', 
-                value='On Damaged: 3% / 6% / 9% / 12% chance for 10% / 20% / 30% / 40% Parkour Velocity for 2 / 4 / 6 / 8 Seconds', 
-                inline=True
-            )
-            await message.channel.send(embed=embed)
-
-        if 'arcane arachne' in message.content.lower():
-            embed=discord.Embed(color=0x5ff1f1)
-            embed.set_thumbnail(url="https://vignette.wikia.nocookie.net/warframe/images/4/43/ArcaneArachne.png/revision/latest?cb=20181225172057")
-            embed.add_field(
-                name='Arcane Arachne', 
-                value='On Wall Latch for 2s: 100% chance for 25% / 50% / 75% / 100% Bonus Damage for 5s / 10s / 15s / 20s', 
-                inline=True
-            )
-            await message.channel.send(embed=embed)
-
-        if 'arcane avenger' in message.content.lower():
-            embed=discord.Embed(color=0x5ff1f1)
-            embed.set_thumbnail(url="https://vignette.wikia.nocookie.net/warframe/images/a/ab/ArcaneAvenger.png/revision/latest?cb=20181225172059")
-            embed.add_field(
-                name='Arcane Avenger', 
-                value='On Damaged: 4% / 7% / 11% / 14% chance for 7.5% / 15% / 22.5% / 30% Critical Chance for 2 / 4 / 6 / 8 Seconds', 
-                inline=True
-            )
-            await message.channel.send(embed=embed)
-
-        if 'arcane awakening' in message.content.lower():
-            embed=discord.Embed(color=0x5ff1f1)
-            embed.set_thumbnail(url="https://vignette.wikia.nocookie.net/warframe/images/a/ae/ArcaneAwakening.png/revision/latest?cb=20181225172058")
-            embed.add_field(
-                name='Arcane Awakening', 
-                value='On Reload: 10% / 20% / 30% / 40% chance for 25% / 50% / 75% / 100% Damage to Pistols for 4 / 8 / 12 / 16 Seconds', 
-                inline=True
-            )
-            await message.channel.send(embed=embed)
 
         profanity=['fuck', 'shit', 'ass', 'pussy', 'bitch', 'slut']
 
