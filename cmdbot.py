@@ -16,7 +16,7 @@ async def on_ready():
 
 async def changepr():
     await bot.wait_until_ready()
-    channel = bot.get_channel(624992226727952395)
+    channel = bot.get_channel(624999751674232869)
     counter = 0
     while not bot.is_closed():
         cetus_req=requests.get('https://api.warframestat.us/pc/cetusCycle')
@@ -80,4 +80,4 @@ bot.load_extension('cogs.fissure')
 bot.load_extension('cogs.muhbot')
 
 bot.loop.create_task(changepr())
-bot.run('NjI0OTkyMjI2NzI3OTUyMzk1.XYf08A.SoHt7qgnkqCtnZzBnNQ4yNx-cYk')
+bot.run('NjI0OTkyMjI2NzI3OTUyMzk1.XYZDXg.Ixioem2WZbhfKO8EsrlTpeLhhaA')
