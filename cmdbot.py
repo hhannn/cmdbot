@@ -16,7 +16,7 @@ async def on_ready():
 
 async def changepr():
     await bot.wait_until_ready()
-    channel = bot.get_channel(624999751674232869)
+    channel = bot.get_channel(624992226727952395)
     counter = 0
     while not bot.is_closed():
         cetus_req=requests.get('https://api.warframestat.us/pc/cetusCycle')
